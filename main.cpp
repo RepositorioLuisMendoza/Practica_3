@@ -6,10 +6,14 @@ using namespace std;
 
 int main()
 {
-    //binario();
-   // escribir_texto();
-   // leer_texto();
-   // conver_binary();
-    bynarioo();
-    return 0;
+    string texto,binario,codi;
+
+    texto=leer_texto();
+    cout<<texto<<endl;
+    binario=caracter_binario(texto);
+    cout<<binario<<endl;
+    cout<<'\n'<<'\n'<<'\n'<<endl;
+    codi=codificacion_met1(binario);
+    cout<<codi<<endl;
+return 0;
 }
