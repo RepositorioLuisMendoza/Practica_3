@@ -331,7 +331,7 @@ void menu_codificacion (){
 void menu_decodificacion (){
     int metodo=0,semilla=0; string nombre="",texto="";string verificacion = "";
     system("cls");
-    cout << "***** DECODIFICACION *****\n"<<"Problema 1"<<endl;
+    cout << "\n***** DECODIFICACION *****\n"<<"Problema 1"<<endl;
     cout << "Ingrese nombre de texto.txt a decodificar:"<<endl;
     cin>>nombre;
     cout << "Ingrese numero de particiones:"<<endl;
@@ -353,7 +353,7 @@ void menu_app(){
     {
         int veri = 0;
         string archivo_sudo="", archivo_usuario="";
-        cout << "***** APLICACION *****\n\n"<<endl;
+        cout << "\n***** APLICACION *****\n\n"<<endl;
         cout<<"seleccione una opcion \n"<<endl;
         cout<<"1) Inicio Administrador."<<endl;
         cout<<"2) Inicio Usuario."<<endl;
@@ -377,7 +377,7 @@ void menu_app(){
             {
                 int opcion1 = 1;
                 while (opcion1 !=0 ){
-                    cout << "********* BIENVENIDO ADMINISTRADOR*********\n";
+                    cout << "\n********* BIENVENIDO ADMINISTRADOR*********\n";
                     cout << "1) Ingresar nuevo usuario.\n";
                     cout << "0) Salir.\n";
                     string dato = "",nuevo = "";
@@ -429,7 +429,7 @@ void menu_app(){
              * (usuario y contrasena ingresados) pertenescan a un usuario registrado,  veri me dice si el dato verificacion esta en el archivo_usuario
              * si esta se inicia sesion.
              */
-            cout << "********* USUARIO ********* \n";
+            cout << "\n********* USUARIO ********* \n";
             archivo_usuario = lectura(nombre_archivo_usuario);
             archivo_usuario = decodificacion(archivo_usuario,2,4);
             archivo_usuario = binario_caracter(archivo_usuario);
@@ -540,11 +540,7 @@ int  inicio_sesion(string texto)
     verificacion = usuario +','+ contrasena + '\n';
     veri = texto.find_last_of(verificacion);
 
-    string sudo = "admin1,123\nadmin2,123\nadmin3,123\nadmin4,123";
-    if (sudo == texto)
-        cout << "son iguales siiii"<<endl;
-        cout << veri << endl;
-    return veri;
+   return veri;
 }
 
 
