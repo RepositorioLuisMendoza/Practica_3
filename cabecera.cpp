@@ -507,6 +507,10 @@ void menu_app(){
                         }
                         break;
 
+                    case 3:
+                        opcion1 = 0;
+                        break;
+
                     default:
                         cout <<"La opcion ingresada no es valida\n";
                         break;
@@ -534,7 +538,12 @@ int  inicio_sesion(string texto)
     cout << "Ingrese contrasena:\n";
     cin >> contrasena;
     verificacion = usuario +','+ contrasena + '\n';
-    veri = texto.find(verificacion);
+    veri = texto.find_last_of(verificacion);
+
+    string sudo = "admin1,123\nadmin2,123\nadmin3,123\nadmin4,123";
+    if (sudo == texto)
+        cout << "son iguales siiii"<<endl;
+        cout << veri << endl;
     return veri;
 }
 
