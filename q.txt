@@ -1,6 +1,1 @@
-hola
-soy
-un 
-archivo 
-de 
-texto
+AbCd
